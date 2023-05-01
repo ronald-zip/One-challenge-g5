@@ -1,0 +1,221 @@
+html{
+  box-sizing: border-box;
+  background-size: 700%;
+  transition: background-position 1s;
+  width: 100%;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+  color:#000;
+  align-items: center;
+  margin: 20px;
+}
+
+.alura{
+  vertical-align: middle;
+}
+
+.imagen-b{
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+}
+
+.principal{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.article-uno{
+  width: 60%;
+  text-align: center;
+}
+
+.article-dos,.article-tres{
+  width: 40%;
+  text-align: center;
+}
+
+.label{
+  color: #000;
+  font-size: 17px;
+  display: block;
+  padding: 10px
+}
+
+.label-textarea{
+  width: 80%;
+  font-size: 18px;
+  padding: 90px;
+  text-align: left;
+}
+
+.parrafo, .mensaje-info{
+  text-align: center;
+  font-weight: bold;
+  color: #090909;
+  padding: 2px
+}
+
+.textarea-original, .textarea-modificada{
+  width: 80%;
+  height: 350px;
+  resize: none;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.textarea-original{
+  background-color: #e2e2e0;
+  color: #000;
+}
+
+.textarea-original::placeholder{
+  color: #000;
+}
+
+.textarea-modificada{
+  background-color: #e2e2e0;
+  color: #000;
+}
+
+.boton{
+  text-align: center;
+  background-color: transparent;
+  color: #0A3871;
+  border: 2px solid #0A3871;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 40px 10px 40px;
+}
+
+.copiar {
+  width: 80%;
+  margin: 5px auto;
+  display: block;
+}
+
+.boton:hover{
+  background-color: #0A3871;
+  color: #fff;
+  border: transparent;
+}
+
+.notificacion {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1a2e35;
+  color: rgb(238, 243, 243);
+  padding: 10px 45px 10px 10px;
+  border: 2px solid #018673;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.notificacion.show {
+  opacity: 1;
+}
+
+.notificacion .cerrar {
+  position: fixed;
+  top: 1.8rem;
+  right: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #a10f0f;
+  color: #ffffff;
+  border: none;
+  border-radius: 25%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.notificacion .texto {
+  padding-right: 2rem;
+  margin-left: 2rem;
+}
+
+.notificacion .cerrar:hover {
+  background-color: rgb(75, 13, 13);
+}
+
+.close-button {
+  z-index: 1;
+}
+
+.notificacion progress {
+  /* Le damos un ancho del 100% del contenedor */
+  width: 100%;
+  height: 10px;
+  /* Le quitamos el borde por defecto */
+  border: none;
+  /* Le damos un color de fondo gris claro */
+  background-color: #d3d3d3;
+}
+
+/* Seleccionamos la parte interna de la barra de progreso */
+.notificacion progress::-webkit-progress-value {
+  /* Le damos un color verde */
+  background-color: #018673;
+}
+
+/* Seleccionamos la parte externa de la barra de progreso */
+.notificacion progress::-webkit-progress-bar {
+  /* Le damos un color gris oscuro */
+  background-color: #1a2e35;
+}
+
+@media (max-width: 768px) {
+  .texto {
+    flex-basis: 100%;
+  }
+
+  .texto-codificado {
+    flex-basis: 100%;
+  }
+
+  .informacion {
+    flex-basis: 100%;
+  }
+
+  /* Ajuste del tamaño de fuente para los botones */
+  .texto .boton {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto {
+    flex-basis: 100%;
+  }
+
+  .texto-codificado {
+    flex-basis: 100%;
+  }
+
+  .informacion {
+    flex-basis: 100%;
+  }
+
+  /* Ajuste del tamaño de fuente para los botones */
+  .texto .boton {
+    font-size: 12px;
+  }
+}

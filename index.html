@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONE-Alura Challenge encriptador">
+    <link rel="shortcut icon" href="./assets/c.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <title>ONE-Challenge</title>
+</head>
+<header class="header">
+    <h1><img src="./imgs/alura-ico.png" class="alura"> ONE-Challenge G5</h1>
+</header>
+<body>
+    <label class="label-textarea" for="encriptar">Ingrese el texto que deseas encriptar aquí</label>
+    <section class="principal">
+        <article class="article-uno">
+            <form onreset="mostrarOcultarDivs()">
+                <textarea class="textarea-original" name="texto" minlength="1" autofocus  id="textoOriginal" oninput="mostrarOcultarDivs()"></textarea>
+                <br>
+                <br>
+                <label class="label-textarea" for="encriptar">Encripta el texto solo minusculas y sin acentos</label>
+                <br>
+                <br>
+                <input class="boton" type="button" value="Encriptar" id="encriptar" name="Encriptar" onclick="procesar()">
+                <input class="boton" type="button" value="Desencriptar" id="desencriptar" name="Desencriptar" onclick="procesarDesencriptar()">
+                <input class="boton" type="button" value="Pegar" id="pegar">
+                <input class="boton" type="reset" onclick="borrarSegundoTextarea()">
+            </form>
+            <article class="article-uno">
+
+            </article>
+        </article>
+        <article class="article-dos" id="pasivo">
+            <img src="./imgs/alura-bg.png" class="imagen-b">
+            <h3 class="mensaje-info">Ningun mensaje fue encontrado</h3>
+            <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+        </article>
+        <article class="article-tres" id="activo" style="display:none;">
+            <form>
+                <textarea class="textarea-modificada" disabled id="textoEncriptado"></textarea>
+                <br>
+                <label class="label" for="copiar">Usa el boton para copiar tu texto</label>
+                <input class="boton copiar" type="button" name="copiar" value="copiar" id="copiar" onclick="procesarBotonCopiar()">
+            </form>
+        </article>
+        <div class="notificacion" id="notificacion">
+            <span class="mensaje"></span>
+            <button class="cerrar" id="cerrar">X</button>
+            <br><progress></progress>
+          </div>
+    </section>
+
+<script src="main.js"></script>
+</body>
+</html>     
